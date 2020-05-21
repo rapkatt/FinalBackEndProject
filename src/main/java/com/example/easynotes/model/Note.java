@@ -20,9 +20,12 @@ public class Note {
     private Long id;
 
     @NotBlank
+    @Column(name = "title")
     private String title;
 
+
     @NotBlank
+    @Column(name = "content")
     private String content;
 
     @Column(nullable = false, updatable = false)

@@ -25,7 +25,7 @@ public class NoteController {
 
         if (note != null)
             model.addAttribute("notes", note);
-        return "index";
+        return "notes";
     }
     @GetMapping("/addNotes")
     public String AddNotes() {
@@ -34,10 +34,10 @@ public class NoteController {
         return "addNotes";
     }
 
-    @PostMapping("/notes")
-    public String createNote(@Valid @RequestBody Note note) {
+    @PostMapping("/addNotes")
+    public String createNote( Note note) {
         noteRepository.save(note);
-        return "redirect:/index";
+        return "redirect:/notes";
     }
 
     @GetMapping("/notes/{id}")
