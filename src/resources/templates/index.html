@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+<!--    <link rel="stylesheet" href="/main.css">-->
+    <title>Notes</title>
+</head>
+<body>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th> Title </th>
+            <th> Content </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${notes.empty}">
+            <td colspan="2"> No Notes Available </td>
+        </tr>
+        <tr th:each="note : ${notes}">
+            <td><span th:text="${note.title}"> Title </span></td>
+            <td><span th:text="${note.content}"> Content </span></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <a href="/api/addNotes"><button>Add Notes</button></a>
+</div>
+</body>
+</html>
