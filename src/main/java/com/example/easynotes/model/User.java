@@ -16,6 +16,15 @@ public class User {
     @Column(name = "password", length = 255)
     private String password;
 
+    public User(Integer id, String username, String password) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+    }
+
+    public User() {
+    }
+
     public Integer getId() {
         return id;
     }
