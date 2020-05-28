@@ -31,4 +31,4 @@ login: user
 
 password: user
 
-.[LINK TO HEROKU!].(https://floating-cliffs-68088.herokuapp.com)
+[link to heroku!](https://floating-cliffs-68088.herokuapp.com)
