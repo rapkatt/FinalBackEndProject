@@ -16,7 +16,7 @@ import java.util.Date;
         allowGetters = true)
 public class Note {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     @NotBlank
