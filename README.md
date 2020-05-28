@@ -27,6 +27,7 @@ You can test them using postman or any other rest client.
 ## Learn more
 Authoritation
 
-login: rapkat
+login: user
 
-password: 0775580
+password: user
+[LINK TO HEROKU].(https://floating-cliffs-68088.herokuapp.com)
