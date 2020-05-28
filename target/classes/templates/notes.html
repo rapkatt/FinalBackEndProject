@@ -10,8 +10,11 @@
     <table>
         <thead>
         <tr>
+            <th> ID </th>
             <th> Title </th>
             <th> Content </th>
+            <th> Delete </th>
+            <th> Change </th>
         </tr>
         </thead>
         <tbody>
@@ -19,8 +22,20 @@
             <td colspan="2"> No Notes Available </td>
         </tr>
         <tr th:each="note : ${notes}">
+
+            <td><span th:text="${note.id}"> ID </span></td>
             <td><span th:text="${note.title}"> Title </span></td>
             <td><span th:text="${note.content}"> Content </span></td>
+            <td>
+            <form method="POST" th:action="@{/notes/{id}(id = ${note.id})}">
+                <input type="submit" value="remove"/>
+            </form>
+            </td>
+            <td>
+                <form method="PUT" th:action="@{/update/{id}(id = ${note.id})}">
+                    <input type="submit" value="edit"/>
+                </form>
+            </td>
         </tr>
         </tbody>
     </table>

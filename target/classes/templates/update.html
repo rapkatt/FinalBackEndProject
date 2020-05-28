@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${'Update note No. ' + note.id}"></title>
+</head>
+<body>
+<h3>Edit the note</h3>
+<form method="POST" th:action="@{/update}" th:object="${note}">
+    <input type="number" hidden="hidden" name="id" th:value="${note.id}">
+
+    <label for="title">Title</label>
+    <input type="text" name="title" size="50" th:value="${note.title}">
+
+
+    <label for="content">Content</label>
+    <input type="text" name="content" size="50" th:value="${note.content}">
+
+
+    <input type="submit" value="Update">
+</form>
+</body>
+</html>
